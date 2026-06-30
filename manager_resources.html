@@ -600,25 +600,6 @@ const resources = [
     note: "10am–noon ET",
   },
   {
-    title: "AI Tools for Managers and Coaches",
-    url: "https://learning.oreilly.com/live-events/ai-tools-for-managers-and-coaches/0642572013855/0642572359720/",
-    date: "2026-06-18",
-    dateLabel: "June 18",
-    format: "live",
-    topic: "AI for managers",
-    technical: false,
-  },
-  {
-    title: "Secrets of Positive Team Leadership",
-    url: "https://learning.oreilly.com/live-events/secrets-of-positive-team-leadership/0636920095969/",
-    date: "2026-06-22",
-    dateLabel: "June 22",
-    format: "live",
-    topic: "People management",
-    technical: false,
-    note: "Noon–3pm ET",
-  },
-  {
     title: "New Manager Bootcamp",
     url: "https://learning.oreilly.com/live-events/new-manager-bootcamp/0790145045191/",
     date: "2026-08-06",
@@ -636,7 +617,7 @@ const resources = [
     format: "live",
     topic: "New managers",
     technical: false,
-    note: "9am–noon PT · Registration page to come",
+    note: "Noon–3pm ET · Registration page to come",
   },
   {
     title: "Leadership Communication Skills for Managers",
@@ -647,6 +628,46 @@ const resources = [
     topic: "Communication & influence",
     technical: false,
     note: "11am–1pm ET",
+  },
+  {
+    title: "Leadership Communication Skills for Managers",
+    url: "https://learning.oreilly.com/live-events/-/0636920054671/",
+    date: "2026-08-21",
+    dateLabel: "Aug 21",
+    format: "live",
+    topic: "Communication & influence",
+    technical: false,
+    note: "9am–11am ET",
+  },
+  {
+    title: "Technical Storytelling",
+    url: "https://learning.oreilly.com/live-events/technical-storytelling/0642572349455/",
+    date: "2026-08-28",
+    dateLabel: "Aug 28",
+    format: "live",
+    topic: "Communication & influence",
+    technical: false,
+    note: "Noon–3pm ET",
+  },
+  {
+    title: "How to Think Strategically about Work after Automation",
+    url: "https://learning.oreilly.com/live-events/how-to-think-strategically-about-work-after-automation/0642572362621/",
+    date: "2026-08-03",
+    dateLabel: "Aug 3",
+    format: "live",
+    topic: "AI for managers",
+    technical: false,
+    note: "8am–11am ET",
+  },
+  {
+    title: "Managing Your Team through AI Change",
+    url: null,
+    date: null,
+    dateLabel: "Fall 2026",
+    format: "live",
+    topic: "AI for managers",
+    technical: false,
+    note: "Registration page to come",
   },
 
   // --- SPECIAL EVENTS ---
@@ -673,7 +694,7 @@ const resources = [
   },
   {
     title: "AI for Managers: Use ChatGPT and Claude to Help You Set Goals, Delegate, Coach, and Give Feedback",
-    url: "https://learning.oreilly.com/course/ai-for-managers/9780135563946/",
+    url: "https://learning.oreilly.com/course/ai-for-managers/0642572260668/",
     date: null,
     dateLabel: "On demand",
     format: "ondemand",
@@ -858,7 +879,7 @@ function resourceItem(r) {
   return `
     <li class="training">
       ${formatIconHtml(r.format)}
-      ${r.date ? dateBlockHtml(r) : ""}
+      ${(r.date || (r.format === "live" && r.dateLabel)) ? dateBlockHtml(r) : ""}
       <div class="training-body">
         <div class="${titleClass}">${titleHtml}</div>
         <div class="training-meta">${metaParts.join("")}</div>
@@ -881,11 +902,16 @@ function sectionBlock(title, items, count) {
     </section>`;
 }
 
+const FORMAT_PRIORITY = { live: 0, special: 1, ondemand: 2, reading: 3 };
+
 function sortItems(list) {
   return [...list].sort((a, b) => {
     if (a.order && b.order) return a.order - b.order;
     if (a.order) return 1;
     if (b.order) return -1;
+    const fA = FORMAT_PRIORITY[a.format] ?? 9;
+    const fB = FORMAT_PRIORITY[b.format] ?? 9;
+    if (fA !== fB) return fA - fB;
     if (a.date && !b.date) return -1;
     if (!a.date && b.date) return 1;
     if (a.date && b.date) return a.date.localeCompare(b.date);
@@ -920,6 +946,9 @@ function viewByTopic() {
     if (a.order && b.order) return a.order - b.order;
     if (a.order) return 1;
     if (b.order) return -1;
+    const fA = FORMAT_PRIORITY[a.format] ?? 9;
+    const fB = FORMAT_PRIORITY[b.format] ?? 9;
+    if (fA !== fB) return fA - fB;
     if (a.date && !b.date) return -1;
     if (!a.date && b.date) return 1;
     if (a.date && b.date) return a.date.localeCompare(b.date);
