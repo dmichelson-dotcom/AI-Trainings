@@ -1,5 +1,5 @@
 {
-  "title": "Manager Dev Series",
+  "title": "CURRENT Manager Dev Series",
   "assetType": "interactive-sales-experience",
   "templateId": "landing-page",
   "templateState": {
@@ -85,9 +85,12 @@
                 "type": "Live event",
                 "publicUrl": "https://www.oreilly.com/live-events/new-manager-bootcamp/0790145045191/",
                 "category": "New managers",
-                "sourceOrigin": "user",
-                "isSourceManaged": false,
-                "startAt": "2026-08-06T17:00:00.000Z"
+                "sourceOrigin": "external",
+                "isSourceManaged": true,
+                "startAt": "2026-08-06T17:00:00.000Z",
+                "sourceUrl": "https://www.oreilly.com/live-events/new-manager-bootcamp/0790145045191/",
+                "sourceType": "manual-public-url",
+                "retrievedAt": "2026-09-01T20:47:42.076Z"
               },
               {
                 "date": "Sep 2, 2026",
@@ -100,9 +103,12 @@
                 "type": "Live event",
                 "publicUrl": "https://www.oreilly.com/live-events/leading-your-first-team/0642572392826/",
                 "category": "New managers",
-                "sourceOrigin": "user",
-                "isSourceManaged": false,
-                "startAt": "2026-09-02T19:00:00.000Z"
+                "sourceOrigin": "external",
+                "isSourceManaged": true,
+                "startAt": "2026-09-02T19:00:00.000Z",
+                "sourceUrl": "https://www.oreilly.com/live-events/leading-your-first-team/0642572392826/",
+                "sourceType": "manual-public-url",
+                "retrievedAt": "2026-09-01T20:47:42.076Z"
               },
               {
                 "id": "learning-v1a6s8",
@@ -110,8 +116,11 @@
                 "type": "On demand",
                 "publicUrl": "https://www.oreilly.com/videos/becoming-a-manager/0642572244620/",
                 "category": "New managers",
-                "sourceOrigin": "user",
-                "isSourceManaged": false
+                "sourceOrigin": "external",
+                "isSourceManaged": true,
+                "sourceUrl": "https://www.oreilly.com/videos/becoming-a-manager/0642572244620/",
+                "sourceType": "manual-public-url",
+                "retrievedAt": "2026-09-01T20:47:42.076Z"
               },
               {
                 "date": "Aug 19, 2026",
@@ -120,7 +129,7 @@
                 "year": 2026,
                 "time": "10:00AM PDT / 1:00PM EDT / 5:00PM UTC",
                 "id": "learning-1rsvn3p",
-                "title": "The Managers Operating System A Deep Dive Working Session",
+                "title": "The Manager's Operating System: A Deep-Dive Working Session",
                 "type": "Live event",
                 "publicUrl": "https://learning.oreilly.com/live-events/the-managers-operating-system-a-deep-dive-working-session/0642572426187/0642572426170/",
                 "category": "New managers",
@@ -145,8 +154,11 @@
                 "type": "On demand",
                 "publicUrl": "https://www.oreilly.com/videos/building-trust-as/0636920924487/",
                 "category": "People management",
-                "sourceOrigin": "user",
-                "isSourceManaged": false
+                "sourceOrigin": "external",
+                "isSourceManaged": true,
+                "sourceUrl": "https://www.oreilly.com/videos/building-trust-as/0636920924487/",
+                "sourceType": "manual-public-url",
+                "retrievedAt": "2026-09-01T20:47:42.076Z"
               },
               {
                 "id": "learning-4z890g",
@@ -154,8 +166,11 @@
                 "type": "On demand",
                 "publicUrl": "https://www.oreilly.com/videos/creating-a-feedback-culture/9780135898079/",
                 "category": "People management",
-                "sourceOrigin": "user",
-                "isSourceManaged": false
+                "sourceOrigin": "external",
+                "isSourceManaged": true,
+                "sourceUrl": "https://www.oreilly.com/videos/creating-a-feedback-culture/9780135898079/",
+                "sourceType": "manual-public-url",
+                "retrievedAt": "2026-09-01T20:47:42.076Z"
               },
               {
                 "id": "learning-17b691a",
@@ -163,8 +178,11 @@
                 "type": "On demand",
                 "publicUrl": "https://www.oreilly.com/videos/fundamentals-of-effective/0636920942702/",
                 "category": "People management",
-                "sourceOrigin": "user",
-                "isSourceManaged": false
+                "sourceOrigin": "external",
+                "isSourceManaged": true,
+                "sourceUrl": "https://www.oreilly.com/videos/fundamentals-of-effective/0636920942702/",
+                "sourceType": "manual-public-url",
+                "retrievedAt": "2026-09-01T20:47:42.076Z"
               },
               {
                 "id": "learning-4mpirc",
@@ -172,8 +190,11 @@
                 "type": "On demand",
                 "publicUrl": "https://www.oreilly.com/videos/leading-remote-teams/0636920893103/",
                 "category": "People management",
-                "sourceOrigin": "user",
-                "isSourceManaged": false
+                "sourceOrigin": "external",
+                "isSourceManaged": true,
+                "sourceUrl": "https://www.oreilly.com/videos/leading-remote-teams/0636920893103/",
+                "sourceType": "manual-public-url",
+                "retrievedAt": "2026-09-01T20:47:42.076Z"
               },
               {
                 "id": "learning-w4a6za",
@@ -181,8 +202,11 @@
                 "type": "Book",
                 "publicUrl": "https://learning.oreilly.com/library/view/leading-effective-engineering/9781098148232/",
                 "category": "People management",
-                "sourceOrigin": "user",
-                "isSourceManaged": false
+                "sourceOrigin": "external",
+                "isSourceManaged": true,
+                "sourceUrl": "https://learning.oreilly.com/library/view/leading-effective-engineering/9781098148232/",
+                "sourceType": "manual-public-url",
+                "retrievedAt": "2026-09-01T20:47:42.076Z"
               }
             ],
             "id": "section-people-management-1",
@@ -192,19 +216,25 @@
             "title": "Communication and influence",
             "resources": [
               {
-                "date": "Aug 21, 2026",
+                "date": "Sep 22, 2026",
                 "month": "Aug",
                 "day": "21",
                 "year": 2026,
-                "time": "9am–11am ET",
+                "time": "2pm–4pm UTC",
                 "id": "learning-17wwrnx",
                 "title": "Leadership Communication Skills for Managers",
                 "type": "Live event",
-                "publicUrl": "https://www.oreilly.com/live-events/leadership-communication-skills-for-managers/0636920054671/",
+                "publicUrl": "https://www.oreilly.com/live-events/leadership-communication-skills-for-managers/0636920054671/0642572423544/",
                 "category": "Communication and influence",
-                "sourceOrigin": "user",
-                "isSourceManaged": false,
-                "startAt": "2026-08-21T15:00:00.000Z"
+                "sourceOrigin": "external",
+                "isSourceManaged": true,
+                "startAt": "2026-09-22T14:00:00.000Z",
+                "sourceUrl": "https://www.oreilly.com/live-events/leadership-communication-skills-for-managers/0636920054671/",
+                "description": "Learn how to best support, respond to, persuade, and inspire your team",
+                "endAt": "2026-09-22T16:00:00.000Z",
+                "instructor": "Curtis Newbold",
+                "sourceType": "manual-public-url",
+                "retrievedAt": "2026-09-01T20:47:42.076Z"
               },
               {
                 "date": "Aug 28, 2026",
@@ -217,9 +247,12 @@
                 "type": "Live event",
                 "publicUrl": "https://www.oreilly.com/live-events/technical-storytelling/0642572349455/",
                 "category": "Communication and influence",
-                "sourceOrigin": "user",
-                "isSourceManaged": false,
-                "startAt": "2026-08-28T19:00:00.000Z"
+                "sourceOrigin": "external",
+                "isSourceManaged": true,
+                "startAt": "2026-08-28T19:00:00.000Z",
+                "sourceUrl": "https://www.oreilly.com/live-events/technical-storytelling/0642572349455/",
+                "sourceType": "manual-public-url",
+                "retrievedAt": "2026-09-01T20:47:42.076Z"
               },
               {
                 "id": "learning-qimluo",
@@ -227,8 +260,11 @@
                 "type": "On demand",
                 "publicUrl": "https://www.oreilly.com/videos/leading-more-effective/0790145866370/",
                 "category": "Communication and influence",
-                "sourceOrigin": "user",
-                "isSourceManaged": false
+                "sourceOrigin": "external",
+                "isSourceManaged": true,
+                "sourceUrl": "https://www.oreilly.com/videos/leading-more-effective/0790145866370/",
+                "sourceType": "manual-public-url",
+                "retrievedAt": "2026-09-01T20:47:42.076Z"
               },
               {
                 "id": "learning-1d4c64j",
@@ -236,8 +272,11 @@
                 "type": "On demand",
                 "publicUrl": "https://www.oreilly.com/videos/stakeholder-management-winning/0636920971542/",
                 "category": "Communication and influence",
-                "sourceOrigin": "user",
-                "isSourceManaged": false
+                "sourceOrigin": "external",
+                "isSourceManaged": true,
+                "sourceUrl": "https://www.oreilly.com/videos/stakeholder-management-winning/0636920971542/",
+                "sourceType": "manual-public-url",
+                "retrievedAt": "2026-09-01T20:47:42.076Z"
               }
             ],
             "id": "section-communication-and-influence-2",
@@ -247,19 +286,25 @@
             "title": "AI for managers",
             "resources": [
               {
-                "date": "Aug 3, 2026",
-                "month": "Aug",
-                "day": "3",
+                "date": "Sep 14, 2026",
+                "month": "Sep",
+                "day": "14",
                 "year": 2026,
                 "time": "8am–11am ET",
+                "startAt": "2026-09-14T15:00:00.000Z",
+                "endAt": "2026-09-14T15:00:00.000Z",
                 "id": "learning-ilq735",
                 "title": "How to Think Strategically about Work after Automation",
                 "type": "Live event",
-                "publicUrl": "https://www.oreilly.com/live-events/how-to-think-strategically-about-work-after-automation/0642572362621/",
+                "publicUrl": "https://www.oreilly.com/live-events/how-to-think-strategically-about-work-after-automation/0642572362621/0642572441227/",
                 "category": "AI for managers",
-                "sourceOrigin": "user",
-                "isSourceManaged": false,
-                "startAt": "2026-08-03T15:00:00.000Z"
+                "sourceOrigin": "external",
+                "isSourceManaged": true,
+                "sourceUrl": "https://www.oreilly.com/live-events/how-to-think-strategically-about-work-after-automation/0642572362621/",
+                "description": "Turn time saved with AI into impactful business decisions",
+                "instructor": "Sujatha Das",
+                "sourceType": "manual-public-url",
+                "retrievedAt": "2026-09-01T20:47:42.076Z"
               },
               {
                 "date": "Aug 7, 2026",
@@ -272,9 +317,12 @@
                 "type": "Live event",
                 "publicUrl": "https://www.oreilly.com/live-events/generative-ai-and-claude-cowork-for-leaders-and-managers/0642572010775/",
                 "category": "AI for managers",
-                "sourceOrigin": "user",
-                "isSourceManaged": false,
-                "startAt": "2026-08-07T16:00:00.000Z"
+                "sourceOrigin": "external",
+                "isSourceManaged": true,
+                "startAt": "2026-08-07T16:00:00.000Z",
+                "sourceUrl": "https://www.oreilly.com/live-events/generative-ai-and-claude-cowork-for-leaders-and-managers/0642572010775/",
+                "sourceType": "manual-public-url",
+                "retrievedAt": "2026-09-01T20:47:42.076Z"
               },
               {
                 "date": "Sep 2, 2026",
@@ -287,9 +335,12 @@
                 "type": "Live event",
                 "publicUrl": "https://www.oreilly.com/live-events/managing-your-team-through-ai-change/0642572411541/0642572411534/",
                 "category": "AI for managers",
-                "sourceOrigin": "user",
-                "isSourceManaged": false,
-                "startAt": "2026-09-02T14:00:00.000Z"
+                "sourceOrigin": "external",
+                "isSourceManaged": true,
+                "startAt": "2026-09-02T14:00:00.000Z",
+                "sourceUrl": "https://www.oreilly.com/live-events/managing-your-team-through-ai-change/0642572411541/0642572411534/",
+                "sourceType": "manual-public-url",
+                "retrievedAt": "2026-09-01T20:47:42.076Z"
               },
               {
                 "id": "learning-1jme7pl",
@@ -297,23 +348,11 @@
                 "type": "On demand",
                 "publicUrl": "https://www.oreilly.com/videos/ai-for-managers/9780135563946/",
                 "category": "AI for managers",
-                "sourceOrigin": "user",
-                "isSourceManaged": false
-              },
-              {
-                "date": "Aug 7, 2026",
-                "month": "Aug",
-                "day": "7",
-                "year": 2026,
-                "time": "10am–12pm ET",
-                "id": "learning-7loif8",
-                "title": "Generative AI and Claude Cowork for Leaders and Managers",
-                "type": "Live event",
-                "publicUrl": "https://www.oreilly.com/live-events/generative-ai-for-leaders-and-managers/0642572010775/0642572253271/",
-                "category": "AI for managers",
-                "sourceOrigin": "user",
-                "isSourceManaged": false,
-                "startAt": "2026-08-07T16:00:00.000Z"
+                "sourceOrigin": "external",
+                "isSourceManaged": true,
+                "sourceUrl": "https://www.oreilly.com/videos/ai-for-managers/9780135563946/",
+                "sourceType": "manual-public-url",
+                "retrievedAt": "2026-09-01T20:47:42.076Z"
               },
               {
                 "id": "learning-15xjhrg",
@@ -321,8 +360,11 @@
                 "type": "On demand",
                 "category": "AI for managers",
                 "publicUrl": "https://learning.oreilly.com/videos/-/0642572260668/",
-                "sourceOrigin": "user",
-                "isSourceManaged": false
+                "sourceOrigin": "external",
+                "isSourceManaged": true,
+                "sourceUrl": "https://learning.oreilly.com/videos/-/0642572260668/",
+                "sourceType": "manual-public-url",
+                "retrievedAt": "2026-09-01T20:47:42.076Z"
               }
             ],
             "id": "section-ai-for-managers-3",
@@ -337,17 +379,23 @@
                 "type": "On demand",
                 "publicUrl": "https://www.oreilly.com/videos/executive-leadership-fundamentals/0636920888994/",
                 "category": "Managing at scale",
-                "sourceOrigin": "user",
-                "isSourceManaged": false
+                "sourceOrigin": "external",
+                "isSourceManaged": true,
+                "sourceUrl": "https://www.oreilly.com/videos/executive-leadership-fundamentals/0636920888994/",
+                "sourceType": "manual-public-url",
+                "retrievedAt": "2026-09-01T20:47:42.076Z"
               },
               {
                 "id": "learning-w871u9",
-                "title": "Tech Leadership Tuesday",
+                "title": "Tech Leadership Tuesday with Lena Reinhard: How to Manage Underperforming Individuals and Teams with Marcus Blankenship",
                 "type": "On demand",
                 "publicUrl": "https://www.oreilly.com/videos/tech-leadership-tuesday/0642572018903/",
                 "category": "Managing at scale",
-                "sourceOrigin": "user",
-                "isSourceManaged": false
+                "sourceOrigin": "external",
+                "isSourceManaged": true,
+                "sourceUrl": "https://www.oreilly.com/videos/tech-leadership-tuesday/0642572018903/",
+                "sourceType": "manual-public-url",
+                "retrievedAt": "2026-09-01T20:47:42.076Z"
               },
               {
                 "id": "learning-1ao1y1g",
@@ -355,8 +403,11 @@
                 "type": "Book",
                 "publicUrl": "https://www.oreilly.com/library/view/the-managers-path/9781491973882/ch05.html",
                 "category": "Managing at scale",
-                "sourceOrigin": "user",
-                "isSourceManaged": false
+                "sourceOrigin": "external",
+                "isSourceManaged": true,
+                "sourceUrl": "https://www.oreilly.com/library/view/the-managers-path/9781491973882/ch05.html",
+                "sourceType": "manual-public-url",
+                "retrievedAt": "2026-09-01T20:47:42.076Z"
               }
             ],
             "id": "section-managing-at-scale-4",
@@ -366,7 +417,7 @@
         "organization": "topic",
         "headerLabel": "Manager Development Series",
         "heroEyebrow": "O'Reilly Learning Platform",
-        "updatedLabel": "Updated 2026-07-24",
+        "updatedLabel": "Updated 2026-09-01",
         "filters": {
           "topics": [
             "New managers",
@@ -376,8 +427,8 @@
             "Managing at scale"
           ],
           "formats": [
-            "Live",
-            "On demand",
+            "Live event",
+            "On-demand video",
             "Book"
           ],
           "sortOptions": [
@@ -386,35 +437,12 @@
             "Recently added"
           ],
           "showTopicFilter": false,
+          "showContentTypeFilter": true,
           "showSortFilter": false
         },
         "heroHeadlineWidth": 1024,
         "heroSubheadWidth": 720,
         "modules": [
-          {
-            "id": "module-2",
-            "version": 1,
-            "type": "featured-resource",
-            "placement": {
-              "slot": "after-hero"
-            },
-            "tone": "accent",
-            "resource": {
-              "mode": "bound",
-              "source": "existing-page-resource",
-              "resourceId": "learning-1rsvn3p",
-              "selection": {
-                "strategy": "by-id"
-              },
-              "fallback": "hide-module"
-            },
-            "presentation": {
-              "showSectionHeading": true,
-              "sectionHeadingText": "Required Attendance",
-              "showEyebrow": false,
-              "containerStyle": "wide-card"
-            }
-          },
           {
             "id": "module-1",
             "version": 1,
@@ -441,7 +469,12 @@
         "chrome": {
           "showFooterBrand": false
         },
-        "showFilters": true
+        "showFilters": true,
+        "contentCollection": {
+          "versionName": "Lead Forward: O'Reilly's Manager Development Series",
+          "updatedAt": "2026-09-01T21:12:00.220Z",
+          "versionId": "content-lead-forward-o-reilly-s-manager-development-seri-2026-09-01-2krg"
+        }
       },
       "salesExperienceType": "curated-learning-page"
     },

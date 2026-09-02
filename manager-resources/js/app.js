@@ -194,6 +194,38 @@
     }
   };
   const cloneCard = (card) => card.cloneNode(true);
+  const liveType = (card) => {
+    const type = card.dataset.curatedLearningCardType || "";
+    return type === "Live event" || type === "Live Courses" || type === "Special event";
+  };
+  const pastBoundary = (card) => {
+    if (!liveType(card)) return null;
+    const end = Date.parse(card.dataset.liveEventEnd || "");
+    if (!Number.isNaN(end)) return end;
+    const start = Date.parse(card.dataset.liveEventStart || "");
+    if (!Number.isNaN(start)) return start + 24 * 60 * 60 * 1000;
+    const match = (card.dataset.liveEventDate || "").match(/\b(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\.?\s+(\d{1,2})(?:\s*[–—-]\s*(\d{1,2}))?,?\s+(\d{4})\b/i);
+    if (!match) return null;
+    const months = { jan: 0, feb: 1, mar: 2, apr: 3, may: 4, jun: 5, jul: 6, aug: 7, sep: 8, oct: 9, nov: 10, dec: 11 };
+    const month = months[match[1].slice(0, 3).toLowerCase()];
+    return month === undefined ? null : Date.UTC(Number(match[4]), month, Number(match[3] || match[2]) + 1);
+  };
+  const isPastEvent = (card, now = Date.now()) => {
+    const boundary = pastBoundary(card);
+    return boundary !== null && boundary <= now;
+  };
+  const cloneForSection = (card, past) => {
+    const clone = cloneCard(card);
+    if (past) clone.dataset.curatedLearningCardPast = "true";
+    else delete clone.dataset.curatedLearningCardPast;
+    const badge = clone.querySelector("[data-curated-learning-card-badge='true']");
+    if (badge && liveType(clone)) {
+      badge.textContent = past ? "Past Event" : clone.dataset.curatedLearningCardType || "Live event";
+    }
+    const cta = clone.querySelector("[data-curated-learning-card-cta][data-curated-learning-card-default-cta='true']");
+    if (cta) cta.textContent = past ? "View recording" : "View details";
+    return clone;
+  };
   const render = (root) => {
     const reservoir = root.querySelector("[data-curated-learning-card-reservoir]");
     const target = root.querySelector("[data-curated-learning-resource-sections]");
@@ -231,8 +263,11 @@
       }
       return (left.dataset.curatedLearningCardDate || "").localeCompare(right.dataset.curatedLearningCardDate || "");
     };
+    const now = Date.now();
+    const past = visible.filter((card) => isPastEvent(card, now));
+    const current = visible.filter((card) => !isPastEvent(card, now));
     const groups = new Map();
-    visible.forEach((card) => {
+    current.forEach((card) => {
       const title = sort === "Topic"
         ? card.dataset.curatedLearningCardCategory || "Other topics"
         : card.dataset.curatedLearningCardSection || "Learning";
@@ -240,8 +275,15 @@
       items.push(card);
       groups.set(title, items);
     });
+    if (past.length) {
+      const items = groups.get("Past Events") || [];
+      items.push(...past);
+      groups.set("Past Events", items);
+    }
     const topicOrder = JSON.parse(root.dataset.curatedLearningTopicOrder || "[]").map(normalize);
     const orderedGroups = Array.from(groups.entries()).sort(([left], [right]) => {
+      if (left === "Past Events") return 1;
+      if (right === "Past Events") return -1;
       if (sort !== "Topic") return 0;
       const leftIndex = topicOrder.indexOf(normalize(left));
       const rightIndex = topicOrder.indexOf(normalize(right));
@@ -263,7 +305,14 @@
       if (count) count.textContent = `${group.length} resources`;
       const grid = section.querySelector("[data-curated-learning-page-grid]");
       if (!grid) return;
-      grid.replaceChildren(...group.sort(compare).map(cloneCard));
+      const pastSection = title === "Past Events";
+      const sorted = group.sort(
+        pastSection
+          ? (left, right) =>
+              (pastBoundary(right) || 0) - (pastBoundary(left) || 0) || compare(left, right)
+          : compare,
+      );
+      grid.replaceChildren(...sorted.map((card) => cloneForSection(card, pastSection)));
       const wrapper = document.createElement("div");
       wrapper.append(section);
       target.append(wrapper);
@@ -284,6 +333,15 @@
       target.append(wrapper);
     }
     modules.forEach((module) => target.append(module));
+    const nextBoundary = cards
+      .map(pastBoundary)
+      .filter((boundary) => boundary !== null && boundary > now)
+      .sort((left, right) => left - right)[0];
+    if (root.__curatedPastEventsTimer) clearTimeout(root.__curatedPastEventsTimer);
+    if (nextBoundary !== undefined) {
+      const delay = Math.min(Math.max(nextBoundary - now + 250, 1000), 2147483647);
+      root.__curatedPastEventsTimer = setTimeout(() => render(root), delay);
+    }
   };
   const initialize = () => document.querySelectorAll("[data-curated-learning-page]").forEach((root) => {
     root.querySelectorAll("select[data-curated-learning-filter]").forEach((select) => {

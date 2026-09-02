@@ -1,4 +1,4 @@
-# Manager Dev Series
+# CURRENT Manager Dev Series
 
 This portable package was exported from O'Reilly Creative Studio.
 
