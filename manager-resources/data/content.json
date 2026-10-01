@@ -93,9 +93,9 @@
                 "retrievedAt": "2026-09-01T20:47:42.076Z"
               },
               {
-                "date": "Sep 2, 2026",
-                "month": "Sep",
-                "day": "2",
+                "date": "Nov 19, 2026",
+                "month": "Nov",
+                "day": "19",
                 "year": 2026,
                 "time": "12pm–3pm ET",
                 "id": "learning-jh07vl",
@@ -105,10 +105,11 @@
                 "category": "New managers",
                 "sourceOrigin": "external",
                 "isSourceManaged": true,
-                "startAt": "2026-09-02T19:00:00.000Z",
+                "startAt": "2026-11-19T17:00:00.000Z",
+                "endAt": "2026-11-19T20:00:00.000Z",
                 "sourceUrl": "https://www.oreilly.com/live-events/leading-your-first-team/0642572392826/",
                 "sourceType": "manual-public-url",
-                "retrievedAt": "2026-09-01T20:47:42.076Z"
+                "retrievedAt": "2026-11-19T17:00:00.000Z"
               },
               {
                 "id": "learning-v1a6s8",
@@ -216,11 +217,11 @@
             "title": "Communication and influence",
             "resources": [
               {
-                "date": "Sep 22, 2026",
-                "month": "Aug",
-                "day": "21",
+                "date": "Nov 6, 2026",
+                "month": "Nov",
+                "day": "6",
                 "year": 2026,
-                "time": "2pm–4pm UTC",
+                "time": "3pm–5pm UTC",
                 "id": "learning-17wwrnx",
                 "title": "Leadership Communication Skills for Managers",
                 "type": "Live event",
@@ -228,20 +229,20 @@
                 "category": "Communication and influence",
                 "sourceOrigin": "external",
                 "isSourceManaged": true,
-                "startAt": "2026-09-22T14:00:00.000Z",
-                "sourceUrl": "https://www.oreilly.com/live-events/leadership-communication-skills-for-managers/0636920054671/",
+                "startAt": "2026-11-06T15:00:00.000Z",
+                "sourceUrl": "https://www.oreilly.com/live-events/leadership-communication-skills-for-managers/0636920054671/0642572423544/",
                 "description": "Learn how to best support, respond to, persuade, and inspire your team",
-                "endAt": "2026-09-22T16:00:00.000Z",
+                "endAt": "2026-11-06T17:00:00.000Z",
                 "instructor": "Curtis Newbold",
                 "sourceType": "manual-public-url",
-                "retrievedAt": "2026-09-01T20:47:42.076Z"
+                "retrievedAt": "2026-11-06T17:00:00.000Z"
               },
               {
-                "date": "Aug 28, 2026",
-                "month": "Aug",
-                "day": "28",
+                "date": "Nov 12, 2026",
+                "month": "Nov",
+                "day": "12",
                 "year": 2026,
-                "time": "12pm–3pm ET",
+                "time": "1pm–4pm ET",
                 "id": "learning-2uzo1q",
                 "title": "Technical Storytelling",
                 "type": "Live event",
@@ -249,10 +250,11 @@
                 "category": "Communication and influence",
                 "sourceOrigin": "external",
                 "isSourceManaged": true,
-                "startAt": "2026-08-28T19:00:00.000Z",
+                "startAt": "2026-11-12T18:00:00.000Z",
+                "endAt": "2026-11-12T21:00:00.000Z",
                 "sourceUrl": "https://www.oreilly.com/live-events/technical-storytelling/0642572349455/",
                 "sourceType": "manual-public-url",
-                "retrievedAt": "2026-09-01T20:47:42.076Z"
+                "retrievedAt": "2026-11-12T18:00:00.000Z"
               },
               {
                 "id": "learning-qimluo",
